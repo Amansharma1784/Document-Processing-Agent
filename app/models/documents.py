@@ -26,6 +26,12 @@ class Documents(Base):
         index=True,
     )
 
+    document_type: Mapped[str] = mapped_column(
+        String(30),
+        nullable=False,
+        index=True,
+    )
+
     original_filename: Mapped[str] = mapped_column(
         String(255),
         nullable=False,

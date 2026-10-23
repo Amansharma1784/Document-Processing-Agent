@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     DB_NAME: str = "document_processor"
     DB_USER: str = "root"
     DB_PASSWORD: str = ""
-
+    GROQ_API_KEY:str
     model_config = SettingsConfigDict(env_file=".env")
 
 

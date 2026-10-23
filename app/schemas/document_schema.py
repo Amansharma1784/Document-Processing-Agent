@@ -3,6 +3,16 @@ from datetime import datetime
 from pydantic import BaseModel, ConfigDict, EmailStr, Field
 
 
+
+from enum import Enum
+
+
+class DocumentType(str, Enum):
+    INVOICE = "invoice"
+    CONTRACT = "contract"
+    RESUME = "resume"
+    UNKNOWN = "unknown"
+
 class DocumentResponse(BaseModel):
     id: int
     username: str | None
